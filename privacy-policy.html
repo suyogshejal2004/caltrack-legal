@@ -3,130 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CalTrack AI Privacy Policy</title>
+  <title>Privacy Policy | CalTrack AI</title>
+  
+  <!-- Modern Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-main: #020617;
+      --bg-card: rgba(30, 41, 59, 0.7);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.5);
+      --border-color: rgba(255, 255, 255, 0.08);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #ffffff;
-      line-height: 1.8;
+      background-color: var(--bg-main);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%);
+      color: var(--text-main);
+      line-height: 1.7;
       padding: 40px 20px;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 28px;
-      padding: 50px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
 
     .hero {
       text-align: center;
       margin-bottom: 50px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 40px;
     }
 
     .logo {
-      width: 90px;
-      height: 90px;
-      border-radius: 26px;
-      margin: auto;
-      margin-bottom: 24px;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      width: 80px;
+      height: 80px;
+      border-radius: 22px;
+      margin: 0 auto 24px auto;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 42px;
-      box-shadow: 0 12px 32px rgba(37,99,235,0.4);
+      font-size: 40px;
+      box-shadow: 0 10px 30px var(--accent-glow);
     }
 
     h1 {
-      font-size: 46px;
-      margin-bottom: 14px;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      background: linear-gradient(to right, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
-      color: #cbd5e1;
-      font-size: 18px;
+      color: var(--text-muted);
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .section {
-      margin-bottom: 28px;
-      padding: 28px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 30px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .section:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      transform: translateY(-2px);
     }
 
     h2 {
-      color: #60a5fa;
+      color: var(--text-main);
       margin-bottom: 16px;
-      font-size: 28px;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 span {
+      background: var(--accent-blue);
+      color: white;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 14px;
     }
 
     p {
-      color: #e2e8f0;
-      margin-bottom: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
     }
 
     ul {
-      padding-left: 24px;
-      color: #e2e8f0;
+      padding-left: 20px;
+      color: var(--text-muted);
+      list-style-type: none;
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-blue);
+      font-weight: bold;
     }
 
     .highlight {
-      background: rgba(37,99,235,0.18);
-      border: 1px solid rgba(96,165,250,0.25);
-      padding: 18px;
-      border-radius: 18px;
-      margin-top: 18px;
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--accent-blue);
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 20px;
+      color: #cbd5e1;
+      font-size: 15px;
     }
 
-    .email-box {
-      margin-top: 16px;
-      background: #2563eb;
-      padding: 18px;
-      border-radius: 18px;
+    .contact-card {
+      margin-top: 24px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(30,58,138,0.2));
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 24px;
+      border-radius: 16px;
       text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-      word-break: break-word;
-      box-shadow: 0 8px 22px rgba(37,99,235,0.35);
+    }
+
+    .email-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #60a5fa;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .email-link:hover {
+      color: #93c5fd;
+      text-decoration: underline;
     }
 
     .footer {
       text-align: center;
-      margin-top: 40px;
-      color: #94a3b8;
+      margin-top: 50px;
+      color: #64748b;
       font-size: 14px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
     }
 
     @media(max-width: 768px) {
       .container {
-        padding: 30px;
+        padding: 30px 20px;
       }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
+      h1 { font-size: 32px; }
+      .section { padding: 20px; }
     }
   </style>
 </head>
@@ -137,121 +210,82 @@
 
     <div class="hero">
       <div class="logo">🔥</div>
-      <h1>CalTrack AI Privacy Policy</h1>
-      <p class="subtitle">
-        Effective Date: May 13, 2026
-      </p>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">CalTrack AI • Effective May 13, 2026</p>
     </div>
 
     <div class="section">
-      <h2>1. Information We Collect</h2>
-      <p>We may collect the following information:</p>
-
+      <h2><span>1</span> Information We Collect</h2>
+      <p>To provide you with the best health and fitness insights, we may collect the following data:</p>
       <ul>
-        <li>Name and email address</li>
-        <li>User account identifiers</li>
-        <li>Profile photo (optional)</li>
-        <li>Height, weight, BMI and fitness goals</li>
-        <li>Calorie and nutrition tracking data</li>
-        <li>Step count and fitness activity data</li>
-        <li>Food logs and user-created entries</li>
-        <li>Crash logs, diagnostics and analytics data</li>
-        <li>Advertising and device identifiers</li>
+        <li><strong>Account Data:</strong> Name, email address, and user identifiers.</li>
+        <li><strong>Health Metrics:</strong> Height, weight, BMI, and customized fitness goals.</li>
+        <li><strong>Activity Data:</strong> Step count, daily calorie intake, and food logs.</li>
+        <li><strong>Device Data:</strong> Crash logs, analytics, and advertising identifiers.</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>2. How We Use Your Information</h2>
-
+      <h2><span>2</span> How We Use AI (Important)</h2>
+      <p>CalTrack AI utilizes artificial intelligence to provide personalized dietary and fitness insights. Here is how your data interacts with our AI:</p>
       <ul>
-        <li>Provide calorie tracking and fitness functionality</li>
-        <li>Personalize your experience</li>
-        <li>Manage user accounts and authentication</li>
-        <li>Improve app stability and performance</li>
-        <li>Analyze app usage and fix crashes</li>
-        <li>Display ads in the free version of the app</li>
-        <li>Maintain app security and prevent misuse</li>
+        <li>Your food logs and fitness goals are processed to generate personalized recommendations.</li>
+        <li><strong>No Public Training:</strong> Your personal health data is strictly used for your account and is <strong>never</strong> used to train public AI models.</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>3. Advertising & Analytics</h2>
+      <h2><span>3</span> How We Use Your Information</h2>
+      <p>We use your data strictly to make the app better for you:</p>
+      <ul>
+        <li>To provide accurate calorie tracking and fitness functionality.</li>
+        <li>To manage secure user authentication.</li>
+        <li>To analyze app performance and fix crashes.</li>
+        <li>To display relevant ads in the free version of the app.</li>
+      </ul>
+    </div>
 
-      <p>
-        CalTrack AI may use third-party services including Google AdMob, Unity Ads, Firebase Analytics, Firebase Authentication, Firebase Crashlytics and Google Sign-In.
-      </p>
-
+    <div class="section">
+      <h2><span>4</span> Third-Party Services</h2>
+      <p>We partner with trusted industry services to run CalTrack AI. These third parties may collect device and analytics information according to their own privacy policies:</p>
+      <ul>
+        <li><strong>Analytics & Stability:</strong> Firebase Analytics, Firebase Crashlytics.</li>
+        <li><strong>Authentication:</strong> Firebase Authentication, Google Sign-In.</li>
+        <li><strong>Advertising:</strong> Google AdMob, Unity Ads.</li>
+      </ul>
       <div class="highlight">
-        These services may collect device identifiers, crash diagnostics and analytics information according to their own privacy policies.
+        We do not sell your personal health data to data brokers or third-party marketers.
       </div>
     </div>
 
     <div class="section">
-      <h2>4. Data Security</h2>
-
-      <p>
-        We use industry-standard security measures and encrypted HTTPS/TLS connections to help protect user information.
-      </p>
-
-      <p>
-        However, no method of electronic transmission or storage is completely secure.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>5. Account Deletion</h2>
-
-      <p>
-        Users may request deletion of their account and associated data at any time.
-      </p>
-
-      <div class="email-box">
-        suyogshejal.dev@gmail.com
-      </div>
-
-      <p style="margin-top:18px;">
-        Please include your registered account email address while requesting deletion.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>6. Children's Privacy</h2>
-
-      <p>
-        CalTrack AI is not directed toward children under the age required by applicable laws.
-      </p>
-
-      <p>
-        We do not knowingly collect personal information from children.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>7. Your Rights</h2>
-
-      <p>
-        Depending on your region and applicable laws, users may have rights regarding their data including access, correction and deletion.
-      </p>
-
-      <p>
-        To request assistance regarding your information, contact us at:
-      </p>
-
-      <div class="email-box">
-        suyogshejal.dev@gmail.com
+      <h2><span>5</span> Account & Data Deletion</h2>
+      <p>You have the right to request the complete deletion of your account and all associated health data at any time. When requested, we will wipe your data from our active databases.</p>
+      
+      <div class="contact-card">
+        <p style="color: #f8fafc; margin-bottom: 5px;">To request account deletion, email us at:</p>
+        <a href="mailto:suyogshejal.dev@gmail.com" class="email-link">suyogshejal.dev@gmail.com</a>
+        <p style="font-size: 13px; margin-top: 10px;">*Please email us from the address linked to your account.</p>
       </div>
     </div>
 
     <div class="section">
-      <h2>8. Changes To This Policy</h2>
+      <h2><span>6</span> Data Security</h2>
+      <p>We implement industry-standard security measures, including HTTPS/TLS encryption, to protect your information. While we strive to use commercially acceptable means to protect your personal data, no method of transmission over the internet is 100% secure.</p>
+    </div>
 
-      <p>
-        We may update this Privacy Policy from time to time. Updated versions will be posted on this page.
-      </p>
+    <div class="section">
+      <h2><span>7</span> Children's Privacy</h2>
+      <p>CalTrack AI is not intended for use by children under the age of 13 (or the applicable legal age in your region). We do not knowingly collect personal information from children.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>8</span> Changes to this Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect changes in our app or legal requirements. The updated version will be indicated by an updated "Effective Date" at the top of this page.</p>
     </div>
 
     <div class="footer">
-      © 2026 CalTrack AI • All Rights Reserved
+      © 2026 CalTrack AI • Developed by Suyog Shejal • All Rights Reserved
     </div>
 
   </div>
