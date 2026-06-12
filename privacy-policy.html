@@ -3,292 +3,784 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | CalTrack AI</title>
-  
-  <!-- Modern Font -->
+  <title>Privacy Policy — CalTrack AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
-      --bg-main: #020617;
-      --bg-card: rgba(30, 41, 59, 0.7);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent-blue: #3b82f6;
-      --accent-glow: rgba(59, 130, 246, 0.5);
-      --border-color: rgba(255, 255, 255, 0.08);
+      --ink:       #0f0f11;
+      --ink-2:     #3a3a42;
+      --ink-3:     #7a7a88;
+      --ink-4:     #b0b0be;
+      --surface:   #ffffff;
+      --surface-2: #f4f4f7;
+      --surface-3: #eaeaef;
+      --ember:     #ff4f1f;
+      --ember-lt:  #fff0ec;
+      --ember-mid: #ffd5c8;
+      --rule:      #e2e2e8;
+      --radius:    14px;
+      --mono:      'DM Mono', monospace;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:       #f0f0f4;
+        --ink-2:     #c4c4d0;
+        --ink-3:     #7a7a8c;
+        --ink-4:     #48485c;
+        --surface:   #141418;
+        --surface-2: #1c1c22;
+        --surface-3: #24242c;
+        --ember:     #ff6040;
+        --ember-lt:  #2a1812;
+        --ember-mid: #5a2215;
+        --rule:      #2a2a34;
+      }
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--bg-main);
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%);
-      color: var(--text-main);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--surface);
+      color: var(--ink);
       line-height: 1.7;
-      padding: 40px 20px;
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: var(--bg-card);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      padding: 60px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    /* ── TOP STRIPE ── */
+    .stripe {
+      background: var(--ink);
+      height: 4px;
+      width: 100%;
     }
 
-    .hero {
-      text-align: center;
-      margin-bottom: 50px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 40px;
+    /* ── HEADER ── */
+    header {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
     }
 
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 22px;
-      margin: 0 auto 24px auto;
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #ff6a3d, #ff2d00);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
-      box-shadow: 0 10px 30px var(--accent-glow);
+      font-size: 30px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(255, 79, 31, 0.28);
+    }
+
+    .header-text { padding-top: 4px; }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ember);
+      margin-bottom: 6px;
     }
 
     h1 {
-      font-size: 42px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-      background: linear-gradient(to right, #ffffff, #94a3b8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
     }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 16px;
-      font-weight: 400;
+    .meta {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--ink-3);
+      font-family: var(--mono);
+    }
+
+    /* ── NAV PILLS ── */
+    .toc-wrap {
+      max-width: 760px;
+      margin: 0 auto 8px;
+      padding: 0 24px;
+    }
+
+    .toc {
+      background: var(--surface-2);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-family: var(--mono);
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.1em;
+      color: var(--ink-3);
+      margin-bottom: 14px;
     }
 
-    .section {
-      margin-bottom: 30px;
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid transparent;
-      transition: all 0.3s ease;
+    .toc-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    .section:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-color);
-      transform: translateY(-2px);
+    .toc-grid a {
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--ink-2);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 100px;
+      padding: 5px 14px;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .toc-grid a:hover {
+      background: var(--ember-lt);
+      border-color: var(--ember-mid);
+      color: var(--ember);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 8px 24px 80px;
+    }
+
+    /* ── SECTION ── */
+    .sec {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .sec:first-child { border-top: none; margin-top: 24px; }
+
+    .sec-header {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .sec-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ember);
+      min-width: 28px;
+      letter-spacing: 0.06em;
     }
 
     h2 {
-      color: var(--text-main);
-      margin-bottom: 16px;
-      font-size: 22px;
+      font-size: 19px;
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    h2 span {
-      background: var(--accent-blue);
-      color: white;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      font-size: 14px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
     }
 
     p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    ul {
-      padding-left: 20px;
-      color: var(--text-muted);
-      list-style-type: none;
-    }
-
-    li {
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 24px;
-    }
-
-    li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--accent-blue);
-      font-weight: bold;
-    }
-
-    .highlight {
-      background: rgba(59, 130, 246, 0.1);
-      border-left: 4px solid var(--accent-blue);
-      padding: 20px;
-      border-radius: 0 12px 12px 0;
-      margin-top: 20px;
-      color: #cbd5e1;
+      color: var(--ink-2);
       font-size: 15px;
+      margin-bottom: 14px;
     }
 
-    .contact-card {
-      margin-top: 24px;
-      background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(30,58,138,0.2));
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      padding: 24px;
-      border-radius: 16px;
-      text-align: center;
-    }
+    p:last-child { margin-bottom: 0; }
 
-    .email-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: #60a5fa;
-      font-size: 20px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .email-link:hover {
-      color: #93c5fd;
-      text-decoration: underline;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #64748b;
+    /* ── DATA TABLE ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
       font-size: 14px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border-color);
+      margin: 18px 0;
     }
 
-    @media(max-width: 768px) {
-      .container {
-        padding: 30px 20px;
-      }
-      h1 { font-size: 32px; }
-      .section { padding: 20px; }
+    .data-table th {
+      text-align: left;
+      font-size: 11px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--ink-3);
+      padding: 8px 14px;
+      background: var(--surface-2);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .data-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+
+    .data-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-2);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table td:first-child {
+      font-weight: 500;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-family: var(--mono);
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: var(--surface-3);
+      color: var(--ink-3);
+      white-space: nowrap;
+    }
+
+    .badge.required {
+      background: var(--ember-lt);
+      color: var(--ember);
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      display: flex;
+      gap: 14px;
+      background: var(--ember-lt);
+      border: 1px solid var(--ember-mid);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+
+    .callout-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .callout p {
+      color: var(--ink);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .callout strong { color: var(--ember); }
+
+    /* ── PILL LIST ── */
+    .pill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .pill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface-2);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .pill-item-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ember);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .pill-item-body { font-size: 14px; color: var(--ink-2); }
+    .pill-item-body strong { color: var(--ink); font-weight: 500; }
+
+    /* ── THIRD-PARTY CARDS ── */
+    .third-party-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    @media (max-width: 540px) {
+      .third-party-grid { grid-template-columns: 1fr; }
+    }
+
+    .tp-card {
+      background: var(--surface-2);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .tp-card-label {
+      font-size: 11px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--ink-3);
+      margin-bottom: 6px;
+    }
+
+    .tp-card-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .tp-card-desc {
+      font-size: 13px;
+      color: var(--ink-3);
+      line-height: 1.5;
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .contact-box-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .contact-box-body { flex: 1; }
+
+    .contact-box-label {
+      font-size: 12px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-4);
+      margin-bottom: 4px;
+    }
+
+    .contact-box a {
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color 0.15s;
+    }
+
+    .contact-box a:hover { color: var(--ember); }
+
+    .contact-box-note {
+      font-size: 12px;
+      color: var(--ink-3);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ── DELETION STEPS ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 18px 0;
+      position: relative;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    .step:last-child { padding-bottom: 0; }
+
+    .step-num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--ember);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-line {
+      width: 1px;
+      flex: 1;
+      background: var(--rule);
+      margin-top: 6px;
+    }
+
+    .step:last-child .step-line { display: none; }
+
+    .step-body {
+      padding-top: 4px;
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+
+    .step-body strong {
+      display: block;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 24px 40px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-left {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-3);
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: var(--ink-4);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 500px) {
+      header { flex-direction: column; gap: 14px; }
+      .contact-box { flex-direction: column; text-align: center; }
+      footer { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
+  <div class="stripe"></div>
 
-    <div class="hero">
-      <div class="logo">🔥</div>
+  <header>
+    <div class="app-icon">🔥</div>
+    <div class="header-text">
+      <div class="eyebrow">CalTrack AI</div>
       <h1>Privacy Policy</h1>
-      <p class="subtitle">CalTrack AI • Effective May 13, 2026</p>
+      <div class="meta">Effective Date: June 13, 2026 &nbsp;·&nbsp; v2.0</div>
     </div>
+  </header>
 
-    <div class="section">
-      <h2><span>1</span> Information We Collect</h2>
-      <p>To provide you with the best health and fitness insights, we may collect the following data:</p>
-      <ul>
-        <li><strong>Account Data:</strong> Name, email address, and user identifiers.</li>
-        <li><strong>Health Metrics:</strong> Height, weight, BMI, and customized fitness goals.</li>
-        <li><strong>Activity Data:</strong> Step count, daily calorie intake, and food logs.</li>
-        <li><strong>Device Data:</strong> Crash logs, analytics, and advertising identifiers.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2><span>2</span> How We Use AI (Important)</h2>
-      <p>CalTrack AI utilizes artificial intelligence to provide personalized dietary and fitness insights. Here is how your data interacts with our AI:</p>
-      <ul>
-        <li>Your food logs and fitness goals are processed to generate personalized recommendations.</li>
-        <li><strong>No Public Training:</strong> Your personal health data is strictly used for your account and is <strong>never</strong> used to train public AI models.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2><span>3</span> How We Use Your Information</h2>
-      <p>We use your data strictly to make the app better for you:</p>
-      <ul>
-        <li>To provide accurate calorie tracking and fitness functionality.</li>
-        <li>To manage secure user authentication.</li>
-        <li>To analyze app performance and fix crashes.</li>
-        <li>To display relevant ads in the free version of the app.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2><span>4</span> Third-Party Services</h2>
-      <p>We partner with trusted industry services to run CalTrack AI. These third parties may collect device and analytics information according to their own privacy policies:</p>
-      <ul>
-        <li><strong>Analytics & Stability:</strong> Firebase Analytics, Firebase Crashlytics.</li>
-        <li><strong>Authentication:</strong> Firebase Authentication, Google Sign-In.</li>
-        <li><strong>Advertising:</strong> Google AdMob, Unity Ads.</li>
-      </ul>
-      <div class="highlight">
-        We do not sell your personal health data to data brokers or third-party marketers.
+  <!-- Table of Contents -->
+  <div class="toc-wrap">
+    <div class="toc">
+      <div class="toc-label">Jump to section</div>
+      <div class="toc-grid">
+        <a href="#s1">Information We Collect</a>
+        <a href="#s2">How We Store Your Data</a>
+        <a href="#s3">AI Features</a>
+        <a href="#s4">Third-Party Services</a>
+        <a href="#s5">Your Rights &amp; Deletion</a>
+        <a href="#s6">Security</a>
+        <a href="#s7">Children's Privacy</a>
+        <a href="#s8">Policy Changes</a>
+        <a href="#s9">Contact</a>
       </div>
     </div>
-
-    <div class="section">
-      <h2><span>5</span> Account & Data Deletion</h2>
-      <p>You have the right to request the complete deletion of your account and all associated health data at any time. When requested, we will wipe your data from our active databases.</p>
-      
-      <div class="contact-card">
-        <p style="color: #f8fafc; margin-bottom: 5px;">To request account deletion, email us at:</p>
-        <a href="mailto:suyogshejal.dev@gmail.com" class="email-link">suyogshejal.dev@gmail.com</a>
-        <p style="font-size: 13px; margin-top: 10px;">*Please email us from the address linked to your account.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2><span>6</span> Data Security</h2>
-      <p>We implement industry-standard security measures, including HTTPS/TLS encryption, to protect your information. While we strive to use commercially acceptable means to protect your personal data, no method of transmission over the internet is 100% secure.</p>
-    </div>
-
-    <div class="section">
-      <h2><span>7</span> Children's Privacy</h2>
-      <p>CalTrack AI is not intended for use by children under the age of 13 (or the applicable legal age in your region). We do not knowingly collect personal information from children.</p>
-    </div>
-
-    <div class="section">
-      <h2><span>8</span> Changes to this Policy</h2>
-      <p>We may update this Privacy Policy periodically to reflect changes in our app or legal requirements. The updated version will be indicated by an updated "Effective Date" at the top of this page.</p>
-    </div>
-
-    <div class="footer">
-      © 2026 CalTrack AI • Developed by Suyog Shejal • All Rights Reserved
-    </div>
-
   </div>
+
+  <main>
+
+    <!-- INTRO -->
+    <div class="sec" style="border-top:none; margin-top:24px; padding-top:0;">
+      <p>CalTrack AI is committed to protecting your privacy. This policy explains exactly what data we collect, why we collect it, and how it is handled — in plain language, with no surprises.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="sec" id="s1">
+      <div class="sec-header">
+        <span class="sec-num">01</span>
+        <h2>Information We Collect</h2>
+      </div>
+
+      <p><strong>A. Information you provide directly</strong></p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>What it includes</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account</td>
+            <td>Email address, password hash, or Google Sign-In token</td>
+            <td><span class="badge required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Profile</td>
+            <td>Age, gender, height, weight, activity level, dietary goals</td>
+            <td><span class="badge required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Health Logs</td>
+            <td>Food diary, water intake, weight entries, custom activity logs</td>
+            <td><span class="badge required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Media</td>
+            <td>Profile photo, screenshots attached to bug reports</td>
+            <td><span class="badge">Optional</span></td>
+          </tr>
+          <tr>
+            <td>Support</td>
+            <td>Feedback messages, feature requests, deletion reasons</td>
+            <td><span class="badge">Optional</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:20px;"><strong>B. Information collected automatically</strong></p>
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Diagnostics —</strong> App version, OS version, device model, and Firebase User ID. Collected <em>only</em> when you explicitly send a bug report.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Analytics —</strong> Generalised screen views and session durations via Firebase Analytics, used purely to improve app stability.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Advertising ID —</strong> Your device's Advertising ID (AAID) is read by Google AdMob to serve ads in the free version of the app.</div>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;"><strong>C. Information from connected services</strong></p>
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Google Health Connect (Android) —</strong> With your explicit permission, we read step count, active and total calories burned, distance, and exercise logs to sync physical activity with your daily goals. This is entirely optional.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="sec" id="s2">
+      <div class="sec-header">
+        <span class="sec-num">02</span>
+        <h2>How We Store Your Data</h2>
+      </div>
+      <p>CalTrack AI uses a <strong>local-first</strong> architecture — your data lives on your device first.</p>
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>On-device —</strong> All daily logs and health metrics are stored locally in a secure on-device database (WatermelonDB).</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Cloud backup —</strong> To enable cross-device access and backup, your local data is securely synchronised to Google Cloud Firestore. Profile photos and bug report attachments are uploaded to Firebase Storage.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="sec" id="s3">
+      <div class="sec-header">
+        <span class="sec-num">03</span>
+        <h2>AI Features</h2>
+      </div>
+      <p>CalTrack AI offers AI-powered food scanning, text logging, and activity logging. Here is exactly how those features handle your data:</p>
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>What is sent —</strong> Photos or text descriptions you submit are transmitted to the <strong>Google Gemini API</strong> solely to estimate calories and macronutrients.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>What is not done —</strong> Your personal health data is <em>never</em> used to train public AI models, and is never shared with advertisers.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Retention —</strong> Images and texts sent to Gemini are processed to return nutritional data and are governed by Google's own data usage policy.</div>
+        </div>
+      </div>
+      <div class="callout">
+        <div class="callout-icon">🔒</div>
+        <p><strong>No public training.</strong> Your food logs, weight history, and health goals are used only to power your personal experience — they never feed into shared model training.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="sec" id="s4">
+      <div class="sec-header">
+        <span class="sec-num">04</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>We do not sell your personal data. We share data only with the following service providers needed to operate CalTrack AI:</p>
+
+      <div class="third-party-grid">
+        <div class="tp-card">
+          <div class="tp-card-label">Auth &amp; Database</div>
+          <div class="tp-card-name">Google Firebase</div>
+          <div class="tp-card-desc">Authentication, Firestore database, file storage, Remote Config, and Analytics.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">AI Processing</div>
+          <div class="tp-card-name">Google Gemini API</div>
+          <div class="tp-card-desc">Processes food photos and text descriptions to return calorie and macro estimates.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">Advertising</div>
+          <div class="tp-card-name">Google AdMob</div>
+          <div class="tp-card-desc">Serves banner and interstitial ads in the free tier using your device Advertising ID.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">Health Data</div>
+          <div class="tp-card-name">Google Health Connect</div>
+          <div class="tp-card-desc">Read-only access to activity data. Never shared with third parties for advertising.</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-icon">🚫</div>
+        <p>We do <strong>not</strong> sell your personal health data to data brokers, third-party marketers, or any other commercial entity.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="sec" id="s5">
+      <div class="sec-header">
+        <span class="sec-num">05</span>
+        <h2>Your Rights &amp; Account Deletion</h2>
+      </div>
+      <p>You have full control over your data at any time.</p>
+
+      <p style="margin-top:16px;"><strong>Delete your account in-app</strong></p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">1</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <strong>Open Settings</strong>
+            Navigate to the Settings tab in CalTrack AI.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">2</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <strong>Account Security</strong>
+            Tap Account Security in the Settings menu.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">3</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <strong>Delete Account</strong>
+            Tap Delete Account. Your Firebase Authentication record and all cloud data will be permanently removed immediately.
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">You can also <strong>wipe local data</strong> from your device without removing your cloud account — also found under Account Security.</p>
+
+      <div class="callout" style="margin-top:20px;">
+        <div class="callout-icon">✉️</div>
+        <p>Prefer to request deletion by email? Contact us at <strong>aquaalert.app@gmail.com</strong> from the address linked to your account.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="sec" id="s6">
+      <div class="sec-header">
+        <span class="sec-num">06</span>
+        <h2>Security</h2>
+      </div>
+      <p>We use industry-standard encryption provided by Google Firebase to protect your data in transit and at rest. While no method of electronic storage is 100% secure, we implement commercially accepted practices to safeguard your information and review them regularly.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="sec" id="s7">
+      <div class="sec-header">
+        <span class="sec-num">07</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>CalTrack AI is not intended for use by children under the age of 13 (or the applicable legal age in your region). We do not knowingly collect personal information from children. If we discover that a child has provided us with personal information, we will delete it from our servers immediately.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="sec" id="s8">
+      <div class="sec-header">
+        <span class="sec-num">08</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our app or legal requirements. We will notify you of significant changes by updating the Effective Date at the top of this page and by posting a notice within the app.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="sec" id="s9">
+      <div class="sec-header">
+        <span class="sec-num">09</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p>Have questions or concerns about this Privacy Policy? You can reach us through the <strong>Contact Support</strong> option inside the app, or directly by email:</p>
+      <div class="contact-box">
+        <div class="contact-box-icon">✉️</div>
+        <div class="contact-box-body">
+          <div class="contact-box-label">Support Email</div>
+          <a href="mailto:aquaalert.app@gmail.com">aquaalert.app@gmail.com</a>
+          <div class="contact-box-note">Please write from the email address linked to your account.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© 2026 CalTrack AI · Developed by Suyog Shejal</div>
+    <div class="footer-right">All rights reserved</div>
+  </footer>
 
 </body>
 </html>
