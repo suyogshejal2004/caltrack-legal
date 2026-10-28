@@ -498,8 +498,8 @@
     <div class="app-icon">🔥</div>
     <div class="header-text">
       <div class="eyebrow">CalTrack AI</div>
-      <h1>Privacy Policy</h1>
-      <div class="meta">Effective Date: June 13, 2026 &nbsp;·&nbsp; v2.0</div>
+      <h1>Privacy Policy &amp; Terms of Service</h1>
+      <div class="meta">Effective Date: October 2026 &nbsp;·&nbsp; v2.1</div>
     </div>
   </header>
 
@@ -511,12 +511,14 @@
         <a href="#s1">Information We Collect</a>
         <a href="#s2">How We Store Your Data</a>
         <a href="#s3">AI Features</a>
-        <a href="#s4">Third-Party Services</a>
-        <a href="#s5">Your Rights &amp; Deletion</a>
-        <a href="#s6">Security</a>
-        <a href="#s7">Children's Privacy</a>
-        <a href="#s8">Policy Changes</a>
-        <a href="#s9">Contact</a>
+        <a href="#s4">Subscriptions &amp; Billing</a>
+        <a href="#s5">Third-Party Services</a>
+        <a href="#s6">Terms of Service</a>
+        <a href="#s7">Your Rights &amp; Deletion</a>
+        <a href="#s8">Security</a>
+        <a href="#s9">Children's Privacy</a>
+        <a href="#s10">Policy Changes</a>
+        <a href="#s11">Contact</a>
       </div>
     </div>
   </div>
@@ -525,7 +527,7 @@
 
     <!-- INTRO -->
     <div class="sec" style="border-top:none; margin-top:24px; padding-top:0;">
-      <p>CalTrack AI is committed to protecting your privacy. This policy explains exactly what data we collect, why we collect it, and how it is handled — in plain language, with no surprises.</p>
+      <p>CalTrack AI is committed to protecting your privacy and providing transparent terms for using our services. This document outlines exactly what data we collect, how we store and process it, how our subscriptions and Google Play AutoPay operate, and the terms governing your use of CalTrack AI — in clear, plain language.</p>
     </div>
 
     <!-- 1 -->
@@ -547,45 +549,55 @@
         <tbody>
           <tr>
             <td>Account</td>
-            <td>Email address, password hash, or Google Sign-In token</td>
+            <td>Email address, password hash, or Google Sign-In authentication token</td>
             <td><span class="badge required">Required</span></td>
           </tr>
           <tr>
             <td>Profile</td>
-            <td>Age, gender, height, weight, activity level, dietary goals</td>
+            <td>Age, gender, height, weight, activity level, target weight, dietary goals</td>
             <td><span class="badge required">Required</span></td>
           </tr>
           <tr>
-            <td>Health Logs</td>
-            <td>Food diary, water intake, weight entries, custom activity logs</td>
+            <td>Health &amp; Food Logs</td>
+            <td>Food diary entries, water intake, daily weight logs, custom activities</td>
             <td><span class="badge required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Subscriptions</td>
+            <td>Google Play purchase token, order ID, entitlement status (Pro/Free)</td>
+            <td><span class="badge">Optional (Pro)</span></td>
           </tr>
           <tr>
             <td>Media</td>
-            <td>Profile photo, screenshots attached to bug reports</td>
+            <td>Profile photo, progress photos, screenshots attached to feedback/support</td>
             <td><span class="badge">Optional</span></td>
           </tr>
           <tr>
             <td>Support</td>
-            <td>Feedback messages, feature requests, deletion reasons</td>
+            <td>Feedback messages, bug reports, feature requests, deletion notes</td>
             <td><span class="badge">Optional</span></td>
           </tr>
         </tbody>
       </table>
 
+      <div class="callout">
+        <div class="callout-icon">💳</div>
+        <p><strong>No financial data stored:</strong> All financial and payment information (credit cards, debit cards, UPI, Google Pay AutoPay details) is processed exclusively by Google Play. CalTrack AI never sees or stores your bank or payment card information.</p>
+      </div>
+
       <p style="margin-top:20px;"><strong>B. Information collected automatically</strong></p>
       <div class="pill-list">
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Diagnostics —</strong> App version, OS version, device model, and Firebase User ID. Collected <em>only</em> when you explicitly send a bug report.</div>
+          <div class="pill-item-body"><strong>Diagnostics &amp; Crash Reports —</strong> App version, OS version, device model, and Firebase User ID. Collected automatically via Firebase Crashlytics to diagnose errors and fix bugs.</div>
         </div>
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Analytics —</strong> Generalised screen views and session durations via Firebase Analytics, used purely to improve app stability.</div>
+          <div class="pill-item-body"><strong>Analytics —</strong> Generalized screen navigations, feature usage frequencies, and session metrics via Firebase Analytics to optimize performance.</div>
         </div>
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Advertising ID —</strong> Your device's Advertising ID (AAID) is read by Google AdMob to serve ads in the free version of the app.</div>
+          <div class="pill-item-body"><strong>Advertising ID —</strong> Your device's Google Advertising ID (AAID) is used by Google AdMob and Unity Ads solely to deliver non-personalized or personalized ads to free-tier users. Pro users experience no ads.</div>
         </div>
       </div>
 
@@ -593,7 +605,7 @@
       <div class="pill-list">
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Google Health Connect (Android) —</strong> With your explicit permission, we read step count, active and total calories burned, distance, and exercise logs to sync physical activity with your daily goals. This is entirely optional.</div>
+          <div class="pill-item-body"><strong>Google Health Connect (Android) —</strong> Only with your explicit permission, we read steps, active calories, total calories, distance, and exercise logs to synchronize physical activity with your daily budget. You can revoke this permission anytime in Android Settings.</div>
         </div>
       </div>
     </div>
@@ -604,15 +616,19 @@
         <span class="sec-num">02</span>
         <h2>How We Store Your Data</h2>
       </div>
-      <p>CalTrack AI uses a <strong>local-first</strong> architecture — your data lives on your device first.</p>
+      <p>CalTrack AI is built on an <strong>offline-first, zero-data-loss architecture</strong>:</p>
       <div class="pill-list">
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>On-device —</strong> All daily logs and health metrics are stored locally in a secure on-device database (WatermelonDB).</div>
+          <div class="pill-item-body"><strong>On-Device Local Database —</strong> All food logs, daily summaries, custom foods, workouts, and progress records reside locally in a high-performance SQLite database (WatermelonDB). Your data is fully accessible offline.</div>
         </div>
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Cloud backup —</strong> To enable cross-device access and backup, your local data is securely synchronised to Google Cloud Firestore. Profile photos and bug report attachments are uploaded to Firebase Storage.</div>
+          <div class="pill-item-body"><strong>Cloud Synchronization &amp; Rolling Backup —</strong> When connected to the internet, your logs synchronize securely with Google Cloud Firestore under your authenticated user ID. This ensures seamless data restoration when updating the app or switching devices.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Media Storage —</strong> User avatars and progress physique photos are stored in private Firebase Storage buckets with authenticated access rules.</div>
         </div>
       </div>
     </div>
@@ -621,26 +637,22 @@
     <div class="sec" id="s3">
       <div class="sec-header">
         <span class="sec-num">03</span>
-        <h2>AI Features</h2>
+        <h2>AI Features &amp; Inference</h2>
       </div>
-      <p>CalTrack AI offers AI-powered food scanning, text logging, and activity logging. Here is exactly how those features handle your data:</p>
+      <p>CalTrack AI provides AI food recognition, barcode lookup, and natural language food logging. Here is how your data is handled:</p>
       <div class="pill-list">
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>What is sent —</strong> Photos or text descriptions you submit are transmitted to the <strong>Google Gemini API</strong> solely to estimate calories and macronutrients.</div>
+          <div class="pill-item-body"><strong>Transmission —</strong> Food images and text descriptions you submit are transmitted over encrypted HTTPS to the <strong>Google Gemini API</strong> strictly to identify ingredients and calculate estimated calories and macronutrients.</div>
         </div>
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>What is not done —</strong> Your personal health data is <em>never</em> used to train public AI models, and is never shared with advertisers.</div>
+          <div class="pill-item-body"><strong>No Model Training —</strong> Your private health data, food logs, body metrics, and progress photos are <em>never</em> used to train public machine learning models.</div>
         </div>
         <div class="pill-item">
           <div class="pill-item-dot"></div>
-          <div class="pill-item-body"><strong>Retention —</strong> Images and texts sent to Gemini are processed to return nutritional data and are governed by Google's own data usage policy.</div>
+          <div class="pill-item-body"><strong>No Sale to Advertisers —</strong> Scanned food data and dietary habits are never sold, rented, or traded to data brokers or advertising networks.</div>
         </div>
-      </div>
-      <div class="callout">
-        <div class="callout-icon">🔒</div>
-        <p><strong>No public training.</strong> Your food logs, weight history, and health goals are used only to power your personal experience — they never feed into shared model training.</p>
       </div>
     </div>
 
@@ -648,36 +660,35 @@
     <div class="sec" id="s4">
       <div class="sec-header">
         <span class="sec-num">04</span>
-        <h2>Third-Party Services</h2>
+        <h2>Subscriptions, AutoPay &amp; Billing</h2>
       </div>
-      <p>We do not sell your personal data. We share data only with the following service providers needed to operate CalTrack AI:</p>
+      <p>CalTrack AI offers optional premium subscriptions (<strong>CalTrack Pro</strong>) providing advanced features including instant AI camera scans, custom meal planners, in-depth nutrient breakdowns, cloud backup, and an ad-free experience.</p>
 
-      <div class="third-party-grid">
-        <div class="tp-card">
-          <div class="tp-card-label">Auth &amp; Database</div>
-          <div class="tp-card-name">Google Firebase</div>
-          <div class="tp-card-desc">Authentication, Firestore database, file storage, Remote Config, and Analytics.</div>
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Google Play In-App Billing &amp; AutoPay —</strong> All subscription transactions, recurring payments, and Google Pay AutoPay authorizations are processed securely by Google Play. CalTrack AI does not handle, store, or process your credit card or bank details.</div>
         </div>
-        <div class="tp-card">
-          <div class="tp-card-label">AI Processing</div>
-          <div class="tp-card-name">Google Gemini API</div>
-          <div class="tp-card-desc">Processes food photos and text descriptions to return calorie and macro estimates.</div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Subscription Plans &amp; Auto-Renewal —</strong> Subscriptions are offered on monthly, annual, or promotional plans. Your subscription will <strong>automatically renew</strong> at the end of each billing cycle unless cancelled at least 24 hours before the current period ends. Google Play AutoPay will charge your chosen payment method automatically.</div>
         </div>
-        <div class="tp-card">
-          <div class="tp-card-label">Advertising</div>
-          <div class="tp-card-name">Google AdMob</div>
-          <div class="tp-card-desc">Serves banner and interstitial ads in the free tier using your device Advertising ID.</div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Free Trials &amp; Promotional Codes —</strong> If you activate a free trial or redeem a promotional code (via Google Play Store promo code or developer grant), you will receive full Pro access for the specified duration. If you do not wish to be billed upon trial conclusion, cancel your subscription at least 24 hours prior to the trial end date in Google Play.</div>
         </div>
-        <div class="tp-card">
-          <div class="tp-card-label">Health Data</div>
-          <div class="tp-card-name">Google Health Connect</div>
-          <div class="tp-card-desc">Read-only access to activity data. Never shared with third parties for advertising.</div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Cancellation Anytime —</strong> You can cancel your subscription at any time. Open the <strong>Google Play Store app</strong> &gt; Tap your profile icon &gt; <strong>Payments &amp; subscriptions</strong> &gt; <strong>Subscriptions</strong> &gt; Select <strong>CalTrack AI</strong> &gt; Tap <strong>Cancel subscription</strong>. Your Pro features remain active until the end of the current paid billing period.</div>
         </div>
-      </div>
-
-      <div class="callout">
-        <div class="callout-icon">🚫</div>
-        <p>We do <strong>not</strong> sell your personal health data to data brokers, third-party marketers, or any other commercial entity.</p>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Refund Policy —</strong> Because billing is managed directly by Google Play, all refund requests are subject to Google Play's standard refund policies. You can request a refund directly through the Google Play Store or Google Support.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Restoration of Purchases —</strong> If you upgrade your device, reinstall CalTrack, or change phones, tap <strong>Restore Purchases</strong> in the subscription or settings screen to restore your active entitlements immediately.</div>
+        </div>
       </div>
     </div>
 
@@ -685,9 +696,79 @@
     <div class="sec" id="s5">
       <div class="sec-header">
         <span class="sec-num">05</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>We work only with reputable, privacy-compliant service providers necessary to operate the application:</p>
+
+      <div class="third-party-grid">
+        <div class="tp-card">
+          <div class="tp-card-label">In-App Subscriptions</div>
+          <div class="tp-card-name">RevenueCat</div>
+          <div class="tp-card-desc">Validates Google Play purchase tokens, manages subscription entitlements, and synchronizes Pro access securely across devices.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">Authentication &amp; Cloud DB</div>
+          <div class="tp-card-name">Google Firebase</div>
+          <div class="tp-card-desc">Firebase Authentication, Firestore database, Cloud Storage, Crashlytics diagnostics, and Remote Config.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">AI Processing</div>
+          <div class="tp-card-name">Google Gemini API</div>
+          <div class="tp-card-desc">Processes submitted food photos and text descriptions to return real-time nutritional approximations.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">Advertising</div>
+          <div class="tp-card-name">Google AdMob &amp; Unity Ads</div>
+          <div class="tp-card-desc">Serves banner and rewarded video ads to free-tier users. Pro subscribers do not see ads.</div>
+        </div>
+        <div class="tp-card">
+          <div class="tp-card-label">Health Tracking</div>
+          <div class="tp-card-name">Google Health Connect</div>
+          <div class="tp-card-desc">Optional read-only access to step counts and calories burned with explicit user permission.</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-icon">🚫</div>
+        <p>We do <strong>not</strong> sell, lease, or monetize your health data, personal weight logs, or food records to advertisers or third-party data brokers.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="sec" id="s6">
+      <div class="sec-header">
+        <span class="sec-num">06</span>
+        <h2>Terms of Service &amp; Health Disclaimer</h2>
+      </div>
+      <p>By downloading, installing, or using CalTrack AI, you agree to the following terms:</p>
+
+      <div class="pill-list">
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Not Medical Advice —</strong> CalTrack AI is an educational fitness and calorie tracking tool designed for general wellness purposes. It is <strong>not</strong> a medical device, and the content provided is not medical advice, diagnosis, or treatment. Always consult a licensed medical doctor or registered dietitian before starting a new diet or exercise regimen.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Nutritional Accuracy —</strong> While we utilize comprehensive nutritional databases and artificial intelligence algorithms, caloric and macro values are estimates and approximations. Variations can occur due to serving sizes, preparation methods, and ingredient brands.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Acceptable Use —</strong> You agree to use the service in compliance with all applicable laws and not to attempt reverse-engineering, unauthorized scraping, or overloading the AI infrastructure.</div>
+        </div>
+        <div class="pill-item">
+          <div class="pill-item-dot"></div>
+          <div class="pill-item-body"><strong>Limitation of Liability —</strong> CalTrack AI and its creators shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the service.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="sec" id="s7">
+      <div class="sec-header">
+        <span class="sec-num">07</span>
         <h2>Your Rights &amp; Account Deletion</h2>
       </div>
-      <p>You have full control over your data at any time.</p>
+      <p>You have full ownership and control over your personal data at all times:</p>
 
       <p style="margin-top:16px;"><strong>Delete your account in-app</strong></p>
       <div class="steps">
@@ -697,8 +778,8 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <strong>Open Settings</strong>
-            Navigate to the Settings tab in CalTrack AI.
+            <strong>Open Profile / Settings</strong>
+            Navigate to the Profile tab in CalTrack AI.
           </div>
         </div>
         <div class="step">
@@ -708,7 +789,7 @@
           </div>
           <div class="step-body">
             <strong>Account Security</strong>
-            Tap Account Security in the Settings menu.
+            Tap Account Security in the settings menu.
           </div>
         </div>
         <div class="step">
@@ -718,59 +799,59 @@
           </div>
           <div class="step-body">
             <strong>Delete Account</strong>
-            Tap Delete Account. Your Firebase Authentication record and all cloud data will be permanently removed immediately.
+            Tap Delete Account. Your cloud profile, database records, and authentication account will be permanently and irreversibly purged from our servers.
           </div>
         </div>
       </div>
 
-      <p style="margin-top:20px;">You can also <strong>wipe local data</strong> from your device without removing your cloud account — also found under Account Security.</p>
+      <p style="margin-top:20px;">You can also <strong>export your data</strong> in standard JSON format or <strong>wipe local data</strong> from your device without deleting your cloud account under Account Security.</p>
 
       <div class="callout" style="margin-top:20px;">
         <div class="callout-icon">✉️</div>
-        <p>Prefer to request deletion by email? Contact us at <strong>aquaalert.app@gmail.com</strong> from the address linked to your account.</p>
+        <p>Prefer deletion via email? Email us at <strong>suyogshejal.dev@gmail.com</strong> from your registered account address and we will process deletion within 48 hours.</p>
       </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="sec" id="s6">
-      <div class="sec-header">
-        <span class="sec-num">06</span>
-        <h2>Security</h2>
-      </div>
-      <p>We use industry-standard encryption provided by Google Firebase to protect your data in transit and at rest. While no method of electronic storage is 100% secure, we implement commercially accepted practices to safeguard your information and review them regularly.</p>
-    </div>
-
-    <!-- 7 -->
-    <div class="sec" id="s7">
-      <div class="sec-header">
-        <span class="sec-num">07</span>
-        <h2>Children's Privacy</h2>
-      </div>
-      <p>CalTrack AI is not intended for use by children under the age of 13 (or the applicable legal age in your region). We do not knowingly collect personal information from children. If we discover that a child has provided us with personal information, we will delete it from our servers immediately.</p>
     </div>
 
     <!-- 8 -->
     <div class="sec" id="s8">
       <div class="sec-header">
         <span class="sec-num">08</span>
-        <h2>Changes to This Policy</h2>
+        <h2>Security</h2>
       </div>
-      <p>We may update this Privacy Policy from time to time to reflect changes in our app or legal requirements. We will notify you of significant changes by updating the Effective Date at the top of this page and by posting a notice within the app.</p>
+      <p>We implement comprehensive security practices including TLS 1.3 encryption for data in transit, AES-256 encryption at rest in Google Firebase, strict Firestore security rules, and user-scoped data segregation. No method of transmission or electronic storage is 100% impenetrable, but we continuously update our architecture to safeguard your personal records.</p>
     </div>
 
     <!-- 9 -->
     <div class="sec" id="s9">
       <div class="sec-header">
         <span class="sec-num">09</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>CalTrack AI is designed for individuals aged 13 and older (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children under 13. If you become aware that a child has created an account, please contact us immediately for prompt deletion.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="sec" id="s10">
+      <div class="sec-header">
+        <span class="sec-num">10</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may periodically update this Privacy Policy and Terms of Service to reflect application enhancements, subscription improvements, or regulatory updates. We will notify users of major updates through an in-app announcement and by updating the Effective Date at the top of this document.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="sec" id="s11">
+      <div class="sec-header">
+        <span class="sec-num">11</span>
         <h2>Contact Us</h2>
       </div>
-      <p>Have questions or concerns about this Privacy Policy? You can reach us through the <strong>Contact Support</strong> option inside the app, or directly by email:</p>
+      <p>If you have any questions, feedback, or legal inquiries regarding this Privacy Policy, Terms of Service, or Google Play Subscriptions, please contact us:</p>
       <div class="contact-box">
         <div class="contact-box-icon">✉️</div>
         <div class="contact-box-body">
-          <div class="contact-box-label">Support Email</div>
-          <a href="mailto:aquaalert.app@gmail.com">aquaalert.app@gmail.com</a>
-          <div class="contact-box-note">Please write from the email address linked to your account.</div>
+          <div class="contact-box-label">Developer &amp; Legal Support</div>
+          <a href="mailto:suyogshejal.dev@gmail.com">suyogshejal.dev@gmail.com</a>
+          <div class="contact-box-note">Alternate: aquaalert.app@gmail.com · Response typically within 24–48 hours.</div>
         </div>
       </div>
     </div>
